@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือกเอลิเมนต์ด้วย Attributes Selector</title>
+    <style>
+        h2[title]{
+            color: aquamarine;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+        }
+        img.pic3[alt]{ /* attribute จะใช้เครื่องหมาย [] */
+            border: solid aqua 2px; /* เส้นขอบ */
+        }
+        h3[title~="title"]{
+            color: bisque;
+        }
+        h3[title~="job"]{
+            font-style: italic;
+        }
+        h3[title~="joy"]{
+            text-decoration: underline; 
+        }
+        p[lang|="en"]{
+            background-color: blueviolet;
+        }
+        a[href^="https"]{
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <h1><center>การเลือกเอลิเมนต์ด้วย Attributes Selector</center></h1>
+    <h2>ไม่มี Attribute ชื่อว่า title</h2>
+    <h2 title="firstTitle">มี Attribute ชื่อว่า title</h2>
+    <h1><center>การใช้งาน Attributes Selector</center></h1>
+    <style>
+    </style>
+    <div>
+        <article>
+            <h2>First Set</h2>
+            <img class="pic1" src="img/pexels-photo-3680912.webp" alt="วิว">
+            <img class="pic2" src="img/pexels-photo-5712530.webp" alt="relax">
+            <img class="pic3" src="img/pexels-photo-8112670.jpeg" alt="พักผ่อน">
+        </article>
+        <hr>
+        <article>
+            <h2>First Set</h2>
+            <img class="pic4" src="img/pexels-photo-8534457.webp" alt="ทำงาน">
+            <img class="pic5" src="img/pexels-photo-9969224.webp" alt="นั่งชิล">
+            <img class="pic6" src="img/pexels-photo-10679096.webp" alt="เที่ยว">
+        </article>
+    </div>
+    <h3 title="title">ตัวที่ 1 ทดสอบการใช้งาน attribute ~=value </h3>
+    <h3 title="job">ตัวที่ 2 ทดสอบการใช้งาน attribute ~=value </h3>
+    <h3 title="joy">ตัวที่ 3 ทดสอบการใช้งาน attribute ~=value </h3>
+    <div>
+        <p lang="en">Hello</p>
+        <p lang="en-us">Hi</p>
+        <p lang="es">Hola</p>
+        <p lang="thai">สวัสดี</p>
+    </div>
+    <h2><center>การใช้งาน attribute^=value</center></h2>
+    <ul>
+        <li><a href="https://www.google.co.th">Google</a></li>
+        <li><a href="https://www.apple.com">Apple</a></li>
+        <li><a href="https://www.microsoft.com">Microsoft</a></li>
+    </ul>
+
+    <ol>
+        <li><a href="https://www.google.co.th">Google</a></li>
+        <li><a href="https://www.apple.com">Apple</a></li>
+        <li><a href="https://www.microsoft.com">Microsoft</a></li>
+    </ol>
+</body>
+</html>
