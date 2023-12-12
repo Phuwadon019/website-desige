@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างที่ 1-1 โครงสร้างพื้นฐานของ CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    /* css แบบเขียนใน html */
+        h1 {
+            color:red; /* เปลี่ยนสี h1 */
+            font-size: 48pt; /* ขนาด h1 */
+        }
+        div.myid {
+            color:white;
+            background-color:black;
+            display: block;
+            font-size: 24px;
+        }
+        p.myp {
+            /*ใช้ class คือเฉพาะเจาะจง */
+            color: blue;
+            font-size: 20px;
+            background-color: white; 
+        }
+        #myid{/* ID = 100 */
+            font-size: 8pt;
+        }
+        .myclass{ /*class = 10*/
+            font-size: 50pt;
+        }
+        div p /*ชื่อแท็ก div และ p*//*แท็ก p ใน div ที่ใช้ *//* = 2*/{
+            font-size: 24pt;
+        }
+        p.myclass{ /*อ่านว่า แท็ก p ใน myclass*/ /* class = 10 div เป็นแท็ก = 1 = 11*/
+            font-size: 10pt;
+        }
+        p { /* p = 1*/ /* p เฉยๆไม่นับ*/
+            color: yellow;
+            font-size: 16pt;
+        }
+        /*อะไรที่มีค่ามากกว่าจะใช้ตัวนั้นเช่น ตัวแท็ก p ที่มีค่า 2(div p) และตัว p ที่มีค่า 1 ระบบจะใช้ตัวที่มีค่ามากกว่านั้นก็คือ 2*/
+
+    </style>
+</head>
+<body> 
+    <h1>ตัวอย่าง 1-1 โครงสร้างพื้นฐานของ CSS</h1> 
+    <div class="myid"> 
+        <p class="myclass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, beatae dolor consequuntur, ad sapiente dignissimos voluptatibus recusandae laudantium a nemo autem tempore atque hic facere totam architecto enim ipsum deleniti?</p>
+        </div>
+    <div>
+        <h2>การใช้งาน External style</h2>
+    </div>
+</body>
+</html>
