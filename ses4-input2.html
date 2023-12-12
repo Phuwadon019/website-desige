@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือกเอลิเมนต์ของฟอร์ม exabled | disbled | read-oldy | read-write | placeholder-shown </title>
+    <style>
+        input{
+            border: 1px solid aqua; /* กรอบสี่เหลี่ยม */
+            border-radius: 3px; /* ความโค้งของมุมกรอบ */
+        }
+        input:enabled{
+            color: black;
+        }
+        input:disabled{
+            color: #eee;
+        }
+        textarea:read-write{
+            background-color: pink;
+            border-radius: 4px;
+        }
+        input:placeholder-shown{
+            color: orange;
+        }
+        input:read-only{
+            color: red;
+        }
+        input:blank{
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>การเลือกเอลิเมนต์ของฟอร์ม exabled | disbled | read-oldy | read-write | placeholder-shown</h1>
+    <form action="">
+        <p><label for="">ชื่อสินค้า : </label>
+            <input type="text" id="name" name="name" enabled blnk>
+        </p>
+        <p>
+            <label for="">สี : </label>
+            <input type="text" id="color" name="color" disabled> 
+        </p>
+        <p>
+            <label for="">ที่อยู่ : </label>
+            <textarea type="text" id="address" name="address"> </textarea> /* id ในที่นี้คือ id ที่เชื่อมกับฐานข้อมูล */
+        </p>
+        <p>
+            <label for="tel">เบอร์โทร : </label>
+            <input type="tel" name="tel" placeholder="08x-xxx-xxxx"> /* placeholder คือให้แสดงวิธีใส่หรือก็คือตัวอย่างที่จะขึ้นโชว์ให้เห็น */
+        </p>
+        <p>
+            <label for=""> ขนส่ง : </label>
+            <input type="ship" value="ไปรษญีย์" readonly>
+        </p>
+    </form>
+
+</body>
+</html>
