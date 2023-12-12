@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือกเอลิเมนต์ด้วย is</title>
+    <style>
+        header :is(h1, a){
+            color: aqua;
+        }
+        h1:hover {
+            color: red;
+        }
+        header h1, header a{ /* มีค่าเท่ากันกับด้านบน แค่เขียนคนละแบบ เป็นรูปแบบที่ไม่เขียน is */
+
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1><a href="#">รายชื่อรถยนต์ไฟฟ้าที่มาแรง</a></h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab fuga magni vitae, rerum repellat, sed ipsa quae laborum voluptas repellendus quam dicta aliquid omnis non velit? Esse aspernatur rerum soluta.</p>
+        <p><a href="#">เอกสารกระทรวง</a></p>
+    </header>
+</body>
+</html>
