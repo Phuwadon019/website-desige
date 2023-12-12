@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือกเอลิเมนต์ของฟอร์ม input pesudo classe</title>
+    <style>
+        h1{
+            color: blanchedalmond;
+            background-color: rgb(81, 90, 90);
+            border-radius: 1rem;
+        }
+        body{
+            background-image:c:\Users\66309010019\Pictures\bridge-g1635f1a42_1920.png;
+        }
+        input:-webkit-autofill{
+            border: 3px solid rgb(133, 240, 204); /* border คือ เส้นขอบ*/
+        }
+        input:autofill{
+            border: 3px solid aquamarine;
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <h1><center>Welcome for My Web site</center></h1>
+        <p>เว็บไซต์นี้ถูกจัดทำขึ้นเพื่อการศึกษาของนักศึกษาเท่านั้น ไม่ได้มีเจตนาแอบแฝงแต่อย่างไร</p>
+        <h2><center>Please Login!</center></h2>
+    </header>
+    <form action="post">
+        <label for="email">Email</label> 
+        <input type="email" name="email" autocomplete="email"><br>
+
+        <label for="name">Name</label>
+        <input type="text" name="text" autocomplete="name"><br>
+
+        <label for="number">Number</label>
+        <input type="number" name="number" autocomplete="number"><br>
+    </form>
+    <button>Login</button>
+    <button>cancel</button>
+    
+    
+</body>
+</html>
