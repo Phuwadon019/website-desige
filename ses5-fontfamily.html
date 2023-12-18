@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กำหนดฟอนต์ด้วย font family</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@200&display=swap'); /* นำมาจากเน็ต ต้องใช้เน็ต */
+        @font-face{
+            font-family: myfont1;
+            src: url("font/Sarabun/THSarabun.ttf") format("turetype")
+        }
+        @font-face{
+            font-family: myfont2;
+            src: url("font/Sarabun/THSarabun.ttf") format("turetype")
+        }
+        h1{
+            font-family: kanit;
+            color: aquamarine;
+            /* text-shadow: 1px 2px 3px #666, 0px -1px 0px #bbb; */ /* เงาตกทอดไปด้านขวา ล่าง ความเบลอ สี */
+            /* -webkit-text-stroke: 0.2px aquamarine ; */
+            text-decoration: overline;/* การขีดเส้นด้วยบักษณะต่างๆ none underline 
+            overline line-through  */
+            text-decoration-color: #3e3e3e;
+            text-decoration-style: dotted;/* solid double dotted 
+            dashed wavy*/
+            
+        }
+        div{
+            font-family: Itim;
+        }
+        p{
+            font-family: myfont1;
+            font-weight: 700;
+            font-size: 15px;
+            font-style:oblique;
+            color: rgb(88, 24, 69,);
+        }
+        p.myclass{
+            font-family: myfont1;
+            font-size: 15px;
+            font-style:oblique;
+        }
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-color: #3e3e3e;
+            padding: 2px;
+            line-height: 1.5.rem;
+        }
+        span{
+            color: red;
+            background-color: yellow;
+            padding: 1px;
+            line-height: 120%; /* ความสูงของเส้น */
+        }
+    </style>
+
+</head>
+<body>
+    <h1>กำหนดฟอนต์ด้วย font family</h1>
+    <p>การกำหนดฟอนต์ที่เหมาะสมกับตัวอักษรบนเว็บเพจ
+        เป็นส่วนหนึ่งที่ทำให้เว็บของเราดูหน้าสนใจมากขึ้น</p>
+        <h2>การกำหนดฟอนต์แบบพิเศษด้วย @font-face</h2>
+        <p class="myclass">
+            เป็นคูณสมบัติให้เราสามารถเลือกใช้งานฟอนต์ได้อิสระมากขึ้น 
+        </p>
+        <div>
+            รูปแบบการใช้ font ภายนอกโดยการดึงฟอนต์มาจาก google font
+        </div>
+
+        <div id="mainDiv">
+            <h3>Fiction Hit</h3>
+            <p> <span>Perter Fan </span> have been waitionfor his normal nose all fo his life.</p>
+            <h3>Sport News</h3>
+            <p> <span>Man City </span>knooked Arsenal 3:1 yesterday.</p>
+        </div>
+</body>
+</html>
