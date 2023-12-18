@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@200&display=swap');
+@font-face{
+    font-family: myfont1;
+    src: url("../font/Sarabun/THSarabun.ttf") format("turetype")/* ../ คือให้หาไฟล์ตัวนี้จากด้านนอกได้ */
+}
+/* body{
+    width: 800px;
+    background-color:antiquewhite;
+    margin: auto;
+    
+} */
+li{
+    font-family: itim;
+    display: inline;
+    font-weight: 900;
+}
+li a{
+    padding-right: 20px;
+}
+a:link{
+    text-decoration: none;  /* ทำให้ไม่มีเส้นด้านล่าง */
+}
+a:hover{
+    text-decoration: underline; /* ทำให้เวลาเอาเมาส์ไปชี้จะมีเส้น */
+}
+h1{
+    color: aquamarine;
+    font-family: itim;
+    text-align: center;
+    background-color:rgba(0, 0, 0.1);
+    border-radius: 20px;
+}
+#mainDiv{
+    color: black;
+    background-color: #e7f7a2;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+}
+.first{
+    font-family: itim;
+    font-size: 20px;
+    padding: 30px ;/* 5px 15px 15px */ /* บน ล่าง ซ้าย ขวา */
+    background-color: antiquewhite;
+    border-radius: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    margin: 10px;
+}
+.second{
+    font-family: itim;
+    font-size: 20px;
+    padding: 30px;
+    background-color: beige;
+    border-radius: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    margin: 10px;
+}
+.box{
+    width: 30%;
+    display: inline-block;
+    padding: auto;
+}
+/* .box-1{
+
+}
+.box-2{
+
+}
+.box-3{
+
+} */
