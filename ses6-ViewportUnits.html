@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- รหัสรองรับภาษา UTF-8 คือภาษาไทย -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- คล้ายๆจัดสเกลหน้าเว็บให้พอดีกับจอนั้นๆ ถ้าไม่มีก็จะต้องเลื่อนไปด้านซ้ายเพื่อดูข้อความที่ยาวเกินหน้าจอ-->
+    <title>การใข้งาน Viewport Units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: #333;
+            color: white;
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
+            padding-top: 15rem;
+        }
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            background-color: antiquewhite;
+            color: black;
+            padding: 0.75rem 2rem;
+            margin: 20px;
+            border-radius: 10px 5px 1px 20px;
+        }
+        .btn:hover{ /* เอาเมาส์ไปชี้แล้วเปลี่ยนสี */
+            background-color: #e3e3e3;
+            color: white;
+        }
+    </style>
+</head>
+<!-- 
+    ค่าต่างๆ ของ viewport units
+    -vw หรือ viewport = บอกสัดส่วนความกว้างของ viewport มีค่าเป็น % เช่น หากเรามีจอกว้าง 100px
+            ต้องการแสดงผล 10% ของความกว้างทั้งหมด ค่าของพื้นที่ก็คือ 10px
+    -vh หรือ viewheigt? = บอกสัดส่วนความสูงของ viewport มีค่าเป็น %
+    -vmin = ค่า % ต่ำสุดของ viewport 
+    -vmax = ค่า % สูงสุดของ viewport
+
+-->
+<body>
+    <header>
+        <h1>Welcome to CSS Tutorial</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, ducimus. Deserunt magnam ipsum laborum eius, impedit aliquam id molestiae maxime voluptatem? Sed aspernatur ab esse architecto ex nobis commodi dicta consequuntur dolores repellat rem numquam itaque perspiciatis unde atque eius sequi nisi quibusdam quam quis, corrupti quia ea. Libero, id?</p>
+        <a href="" class="btn">เข้าชมเว็บไซต์</a>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
