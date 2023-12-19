@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การจัดวางเลย์เอาท์บนเว็บเพจด้วย Float</title>
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .box-1 img{ 
+            float: left;
+        }
+        .box-2 img{
+            float: right;
+        }
+        .box-3 img{
+            float: none;
+        }
+        .mycontainer{
+            background-color: #e3e3e3;
+            color: gray;
+            width: 900px;
+            margin: 30px auto;
+        }
+        .box{
+            background-color: bisque;
+            color: black;
+            border: 1px solid black;
+            padding: 10px 30px; /* บนล่าง 10 ซ้ายขวา 30 */
+            margin: 15px;
+            /* border-width: 3px; */
+        }
+        #box-1{
+            
+        }
+        #box-2{
+            float: left;
+            width: 70%;
+        }
+        #box-3{
+            float: right;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1>การจัดวางเลย์เอาท์บนเว็บเพจด้วย Float</h1>
+    <ul> float กำหนดให้อิลิเมนต์สามารถลอยอยู่ด้านใดด้านหนึ่ง
+        โดยค่าที่กำหนดได้ คือ
+        <li>
+            left, right (ให้ลอยอยู่ทางด้านซ้ายและขวาตามลำดับ)
+        </li>
+        <li>
+            inherit ลอยตาม parent element
+        </li>
+        <li>
+            none ไม่ให้มีการลอย (default)
+        </li>
+    </ul>
+    <ul> clear ไม่อนุญาตให้มีการลอยของอิลิเมนต์ค่าที่กำหนดได้ คือ
+        <li>
+            left, right (ไม่อนุญาตให้มีการลอยทางด้านซ้ายและขวา)
+        </li>
+        <li>
+            both ไม่อนุญาตให้ลอยทั้งสองด้าน
+        </li>
+    </ul>
+    <div class="box-1">
+        <p> 
+            <img src="img/pexels-photo-5712530.webp" alt="" style="width:100px;"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit eum maxime nemo fuga accusantium quis, ducimus nulla obcaecati, amet animi doloremque repellat officia rem iusto sit autem exercitationem sequi ipsam.
+        </p>
+    </div>
+    <div class="box-2">
+        <p>
+            <img src="img/pexels-photo-8534457.webp" alt="" style="width: 100px;"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta unde inventore adipisci omnis molestias. Voluptate, blanditiis illo commodi quia vero quam quidem cumque aliquam nostrum deleniti accusantium ipsum neque? Eveniet?
+        </p>
+        
+    </div>
+    <div class="box-3">
+        <p>
+            <img src="img/pexels-photo-3680912.webp" alt="" style="width: 100px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vitae distinctio mollitia commodi deleniti? Velit, illum eius! Nihil magni repellendus, maiores, et nostrum quod exercitationem libero reprehenderit similique sapiente ducimus!
+        </p>
+    </div>
+<hr>
+    <div class="mycontainer"> <!-- เป็นแม่ของทุกตัวที่อยู้ด้านใน -->
+        <div id="box-1" class="box">
+            <h2>Title 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit delectus, quam modi consequatur suscipit iure voluptatem eum totam corrupti, quos est error saepe cum nostrum assumenda itaque quaerat commodi cumque!</p>
+        </div>
+        <div id="box-2" class="box">
+            <h2>Title 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit delectus, quam modi consequatur suscipit iure voluptatem eum totam corrupti, quos est error saepe cum nostrum assumenda itaque quaerat commodi cumque!</p>
+        </div>
+        <div id="box-3" class="box">
+            <h2>Title 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit delectus, quam modi consequatur suscipit iure voluptatem eum totam corrupti, quos est error saepe cum nostrum assumenda itaque quaerat commodi cumque!</p>
+        </div>
+    </div> <!-- แท็กปิดแม่ -->
+</body>
+</html>
