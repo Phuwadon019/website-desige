@@ -1,20 +1,299 @@
-p {
-    font-family: Rubik;
-    display: inline; /* ทำให้เรียงกันเป็นแนวนอน */
-    color: #333;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.H {
-    color: pink;
+.html {
+    font-size: 62.5%;
 }
 
-p a {
-    padding-right: 20px; /* ระยะห่างระหว่างกัน */
+body {
+    font-family: "Poppins", sans-serif;
 }
-a:link{
+/* menu */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+/* About */
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-decoration: none; 
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase; 
+    font-weight: small;
+}
+
+.btn-primary {
+    color: #fff;
+    background: #16a083;
+}
+
+.btn-primary:hover {
+    background: #117964;
+    transition: background 0.3s ease-in-out;
+}
+
+/*......................*/
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar {
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85; /*  */
+    height: 50px;
+    z-index: 12;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items {
+    order: 2;
+    display: flex;
+}
+
+.menu-items li {
+    list-style: none; /* เอาจุดด้านหน้าออก */
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.menu-items a {
     text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out; /* ระยะเวลาของสีตอนนำเมาส์ออก */
 }
-a:hover{
-    color: black;
-    text-decoration: underline;
+
+.menu-items a:hover {
+    color: #117964;
+    transition: color 0.2s ease-in-out; /* ระยะเวลาก่อนเกิดสีตอนนำเมาส์ไปชี้ */
 }
+
+.logo {
+    order: 1;
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/*-------------------------*/
+
+.showcase-area {
+    height: 50vh;
+    background: linear-gradient( /* น่าจะคำสั่งไล่สีจากเข้มไปบาง */
+        rgba(90, 86, 86, 0.658), /* สีด้านบน */
+        rgba(226, 233, 232, 0.459)  /* สีด้านล่าง */
+      ),
+      url("img/pexels-photo-8534457.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 130%;
+    width: 101%;
+    font-size: 1.2rem;
+}
+
+.main-title {
+    text-transform: uppercase;
+}
+
+/* About Me */
+#about {
+    padding: 50px 0;
+    background: #e3e3e3;
+    
+}
+
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about h2 {
+    font-size: 2.3rem;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#about .small {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.about-img {
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation {
+    100% {
+      transform: translate(0);
+    }
+}
+
+.about-text {
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translate(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-text-animation {
+    100% {
+      transform: translate(0);
+    }
+}
+
+.about-img img {
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 50px;
+}
+
+#social {
+    padding: 5rem 0 10rem 0;
+    background: linear-gradient( /* น่าจะคำสั่งไล่สีจากเข้มไปบาง */
+    rgba(90, 86, 86, 0.658), /* สีด้านบน */
+    rgba(226, 233, 232, 0.459)  /* สีด้านล่าง */
+  ),
+  url("img/pexels-photo-5712530.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#social h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #e3e3e3;
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-container img {
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-container {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.img-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+
+.img-content h3 {
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.img-content a {
+    font-size: 1.2rem;
+}
+
+.img-container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    opacity: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+}
+  
+.img-container:hover::after {
+    opacity: 1;
+    transform: scaleY(1);
+    border-radius: 50px;
+}
+
+.img-container:hover .img-content {
+    opacity: 1;
+    top: 40%;
+    
+}
+
+.img-size {
+    width: 200px;
+    height: 200px;
+    padding: 1px;
+    margin: auto;
+    border-radius: 50px;
+}
+
+/*------------------------*/
+
+#footer h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 2.6rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgb(65, 65, 65);
+  }
+
