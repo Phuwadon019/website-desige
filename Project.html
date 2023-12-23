@@ -1,18 +1,117 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Project.css">
-    <title>Project Web Site</title>
-</head>
-<body>
-    <div>
-        <p class="H"><a href="">Home</a></p>
-        <p class="H"><a href="">About</a></p>
-        <p class="H"><a href="">Instageam</a></p>
-        <p class="H"><a href="">Line</a></p>
-    </div>
-    <h1><center>Welcome To By Web Site</center></h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Project.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container container">
+          <input type="checkbox" name="" id="">
+          <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#social">Social</a></li>
+          </ul>
+          <h1 class="logo">DN</h1>
+      </div>
+  </nav>
+    <section class="showcase-area" id="showcase">
+      <div class="showcase-container">
+        <h1 class="main-title" id="home">My Web Site</h1>
+        <p>Welcome To Web Site This</p>
+        <a href="#about" class="btn btn-primary">About</a>
+      </div>
+    </section>
+    <section id="about">
+      <div class="about-wrapper container">
+        <div class="about-text">
+          <p class="small">About Me</p>
+          <h2>Mr. Phuwadon Tonkanya</h2>
+          <p>
+            Name : Phuwadon Tonkanya <br>
+            Nickname : Don <br>
+            Age : 19 Years old <br>
+            Height : 184 cm <br>
+            Weight : 71 kg <br>
+            Birthday : 17 Febuary 2004 <br>
+          </p>
+        </div>
+        <div class="about-img">
+          <img src="img/IMG_20230815_205156_480.jpg" alt="food" />
+        </div>
+      </div>
+    </section>
+    <section id="social">
+      <h2>Social</h2>
+      <div class="social-container container">
+        <div class="social-type fruite">
+          <div class="img-container">
+            <img class="img-size" src="img/face.jpg" alt="error" />
+            <div class="img-content">
+              <h3>Facebook</h3>
+              <a href="https://www.facebook.com/profile.php?id=100094921388369" class="btn btn-primary" target="blank">learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="social vegetable">
+          <div class="img-container">
+            <img class="img-size" src="img/ig_1.jpg" alt="error" />
+            <div class="img-content">
+              <h3>Instagram</h3>
+              <a href="https://www.instagram.com/doleson.pt04/" class="btn btn-primary" target="blank" >learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <h2>Web Site By Phuwadon Tonkanya</h2>
+    </footer>
+  </body>
+  <!-- .................../ JS Code for smooth scrolling /...................... -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
+      });
+    });
+  </script>
 </html>
